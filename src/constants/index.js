@@ -170,27 +170,12 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "István stands out as a cloud SME/DevOps Engineer, showcasing exceptional technical acumen and a commitment to resolving complex challenges, making him an invaluable asset to any project.",
+    name: "Gurpreet Singh Kambo",
+    designation: "Senior Manager",
+    company: "Bank of Montreal",
+    image:
+      "https://media.licdn.com/dms/image/C5603AQEm_q87bKrOMg/profile-displayphoto-shrink_800_800/0/1660433544025?e=1707955200&v=beta&t=4wy05bkVWwWUuXhpQKWGAaALbd0xMAev9HLlApaG3kQ",
   },
 ];
 
