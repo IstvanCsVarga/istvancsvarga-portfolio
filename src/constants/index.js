@@ -133,7 +133,7 @@ const experiences = [
     title: "Custom Software Engineering Analyst",
     company_name: "Accenture",
     icon: accenture,
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     date: "Dec 2022 - Nov 2023",
     points: [
       "Deploying infrastructure and integrating aspects such as source control, security, compliance, CI/CD, monitoring, and feedback mechanisms.",
