@@ -20,31 +20,63 @@ const SimpleBall = (props) => {
 };
 
 
-const Ball = (props, isMobile) => {
-  const [decal] = useTexture([props.imgUrl]);
+// const Ball = (props, isMobile) => {
+//   const [decal] = useTexture([props.imgUrl]);
+
+//   return (
+//     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+//       <ambientLight intensity={0.25} />
+//       <directionalLight position={[0, 0, 0.05]} />
+//       <mesh castShadow receiveShadow scale={2.75}>
+//         <icosahedronGeometry args={[1, 1]} />
+//         <meshStandardMaterial
+//           color="#fff8eb"
+//           polygonOffset
+//           polygonOffsetFactor={-5}
+//           flatShading
+//         />
+//         <Decal
+//           map={decal}
+//           position={[0, 0, 1]}
+//           flatShading
+//           rotation={[2 * Math.PI, 0, 6.25]}
+//         />
+//       </mesh>
+//     </Float>
+//   );
+// };
+
+const Ball = ({ imgUrl, isMobile }) => {
+  const [decal] = useTexture([imgUrl]);
+
+  const geometryArgs = isMobile ? [1, 0] : [1, 1]; // Less detail for mobile
+  const floatIntensity = isMobile ? 1 : 2; // Less intense floating effect for mobile
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+    <Float speed={1.75} rotationIntensity={1} floatIntensity={floatIntensity}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>
-        <icosahedronGeometry args={[1, 1]} />
+        <icosahedronGeometry args={geometryArgs} />
         <meshStandardMaterial
           color="#fff8eb"
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
         />
-        <Decal
-          map={decal}
-          position={[0, 0, 1]}
-          flatShading
-          rotation={[2 * Math.PI, 0, 6.25]}
-        />
+        {!isMobile && ( // Only render Decal if not on mobile
+          <Decal
+            map={decal}
+            position={[0, 0, 1]}
+            flatShading
+            rotation={[2 * Math.PI, 0, 6.25]}
+          />
+        )}
       </mesh>
     </Float>
   );
 };
+
 
 const BallCanvas = ({ icon }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -75,8 +107,9 @@ const BallCanvas = ({ icon }) => {
     <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        {/* <Ball imgUrl={icon} isMobile={isMobile} /> */}
-        {isMobile ? <SimpleBall /> : <Ball imgUrl={icon} />}
+        {/* <Ball imgUrl={icon} /> */}
+        {/* {isMobile ? <SimpleBall /> : <Ball imgUrl={icon} />} */}
+        <Ball imgUrl={icon} isMobile={isMobile} />
       </Suspense>
 
       <Preload all />
