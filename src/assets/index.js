@@ -17,8 +17,6 @@ import shell from "./tech/shell.png";
 import jenkins from "./tech/jenkins.png";
 import argo from "./tech/argo.png";
 import actions from "./tech/actions.png";
-import prometheus from "./tech/prometheus.png";
-import grafana from "./tech/grafana.png";
 import elastic from "./tech/elastic.png";
 
 import telekom from "./company/telekom.png";
@@ -52,7 +50,5 @@ export {
   tripguide,
   argo,
   actions,
-  prometheus,
-  grafana,
   elastic,
 };

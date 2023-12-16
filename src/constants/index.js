@@ -18,8 +18,6 @@ import {
   devops,
   argo,
   actions,
-  prometheus,
-  grafana,
   elastic,
 } from "../assets";
 
@@ -97,14 +95,6 @@ const technologies = [
   {
     name: "GitHub Actions",
     icon: actions,
-  },
-  {
-    name: "Prometheus",
-    icon: prometheus,
-  },
-  {
-    name: "Grafana",
-    icon: grafana,
   },
   {
     name: "Elasticsearch",
