@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -10,7 +10,17 @@ import {
 
 import CanvasLoader from "../Loader";
 
-const Ball = (props) => {
+const SimpleBall = (props) => {
+  return (
+    <mesh castShadow receiveShadow scale={1.75}>
+      <icosahedronGeometry args={[1, 0]} /> 
+      <meshStandardMaterial color="#fff8eb" />
+    </mesh>
+  );
+};
+
+
+const Ball = (props, isMobile) => {
   const [decal] = useTexture([props.imgUrl]);
 
   return (
@@ -37,11 +47,36 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Set an event listener to check if the user is on mobile or not
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    // Set the initial state of the isMobile variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle
+    // the change of the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+
+      // Add the callback function as a listener to the query
+      mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+      // Remove the callback function from the query
+      return () => {
+        mediaQuery.removeEventListener("change", handleMediaQueryChange);
+      };
+    };
+  }, []);
+
   return (
     <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
+        {/* <Ball imgUrl={icon} isMobile={isMobile} /> */}
+        {isMobile ? <SimpleBall /> : <Ball imgUrl={icon} />}
       </Suspense>
 
       <Preload all />
