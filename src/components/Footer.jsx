@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary">
       <div className="flex justify-center items-center h-16">
-        <span>
+        <span className="mt-1 text-secondary text-[12px]">
           <FontAwesomeIcon icon={faCheckCircle} style={{ color: "green" }} />
           &nbsp; All systems are operational. &nbsp;
         </span>
@@ -18,6 +18,7 @@ const Footer = () => {
           href="https://status.istvanv.dev"
           title="Status"
           style={{ color: "blue" }}
+          className="mt-1 text-secondary text-[14px]"
         >
           Status
         </a>
@@ -28,6 +29,7 @@ const Footer = () => {
           href="https://uptime.istvanv.dev"
           title="Uptime"
           style={{ color: "blue" }}
+          className="mt-1 text-secondary text-[14px]"
         >
           Uptime
         </a>
