@@ -81,6 +81,7 @@ const Contact = () => {
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
               type="text"
+              autoComplete="name"
               name="name"
               value={form.name}
               onChange={handleChange}
@@ -92,6 +93,7 @@ const Contact = () => {
             <span className="text-white font-medium mb-4">Your Email</span>
             <input
               type="email"
+              autoComplete="email"
               name="email"
               value={form.email}
               onChange={handleChange}
