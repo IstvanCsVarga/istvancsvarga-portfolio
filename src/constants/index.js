@@ -40,18 +40,26 @@ const services = [
   {
     title: "DevOps Engineer",
     icon: devops,
+    description:
+      "Experienced in orchestrating cloud deployments and ensuring robust, scalable DevOps systems.",
   },
   {
     title: "Cloud Engineer",
     icon: cloud,
+    description:
+      "Skilled in creating and managing efficient, secure cloud architectures.",
   },
   {
     title: "Site Reliability Engineer",
     icon: sre,
+    description:
+      "Dedicated to maintaining optimal system uptime and performance.",
   },
   {
     title: "Software Engineer",
     icon: engineer,
+    description:
+      "Developing user-centric, efficient software with cutting-edge technology.",
   },
 ];
 
