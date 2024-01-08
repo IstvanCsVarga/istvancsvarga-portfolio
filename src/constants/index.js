@@ -175,6 +175,15 @@ const testimonials = [
     image:
       "https://media.licdn.com/dms/image/C5603AQEm_q87bKrOMg/profile-displayphoto-shrink_800_800/0/1660433544025?e=1707955200&v=beta&t=4wy05bkVWwWUuXhpQKWGAaALbd0xMAev9HLlApaG3kQ",
   },
+  {
+    testimonial:
+      "I highly recommend István for his exceptional problem-solving, rapid learning abilities, and commendable communication skills, making him an invaluable team asset.",
+    name: "Harshdeep Ratnani",
+    designation: "Application Development Manager",
+    company: "Accenture",
+    image:
+      "https://media.licdn.com/dms/image/C4D03AQGkRIlfg3Y0HA/profile-displayphoto-shrink_200_200/0/1578656597546?e=1710374400&v=beta&t=QGEbE32JTiv6LG5z8lqkuttvfndrkSpE0NWmvoik7xI",
+  },
 ];
 
 const projects = [
