@@ -182,7 +182,7 @@ const testimonials = [
     designation: "Application Development Manager",
     company: "Accenture",
     image:
-      "https://media.licdn.com/dms/image/C4D03AQGkRIlfg3Y0HA/profile-displayphoto-shrink_200_200/0/1578656597546?e=1710374400&v=beta&t=QGEbE32JTiv6LG5z8lqkuttvfndrkSpE0NWmvoik7xI",
+      "https://media.licdn.com/dms/image/D5603AQEWLSIyLElIoA/profile-displayphoto-shrink_800_800/0/1705553327425?e=1714003200&v=beta&t=DdMZ5gd4dC9RaS6N9VD086TqvSZ_nqV-V46AZovFD6Y",
   },
 ];
 
