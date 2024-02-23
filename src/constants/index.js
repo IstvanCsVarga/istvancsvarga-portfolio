@@ -173,7 +173,7 @@ const testimonials = [
     designation: "Senior Manager",
     company: "Bank of Montreal",
     image:
-      "https://media.licdn.com/dms/image/C5603AQEm_q87bKrOMg/profile-displayphoto-shrink_800_800/0/1660433544025?e=1707955200&v=beta&t=4wy05bkVWwWUuXhpQKWGAaALbd0xMAev9HLlApaG3kQ",
+      "https://media.licdn.com/dms/image/C5603AQEm_q87bKrOMg/profile-displayphoto-shrink_800_800/0/1660433544025?e=1714003200&v=beta&t=VNrg4G8LmOf8rwRZzXxO3ChD7yVHBSylLH3ZzBshgPM",
   },
   {
     testimonial:
